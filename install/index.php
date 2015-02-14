@@ -24,7 +24,7 @@ class iblocktools extends CModule {
         }
 
         $this->MODULE_NAME = 'Настройки для инфоблоков';
-        $this->MODULE_DESCRIPTION = ''; 
+        $this->MODULE_DESCRIPTION = 'Актуальную версию модуля можно скачать с <a target="blank" href="http://github.com/kudin/bitrix-modules-iblocktools">http://github.com/kudin/bitrix-modules-iblocktools</a>'; 
     }
 
     function DoInstall() {

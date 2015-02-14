@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 $aMenu[] = array(
     "parent_menu" => "global_menu_services",
@@ -11,6 +11,19 @@ $aMenu[] = array(
     "url" => "iblocktools.php",
     "items" => array(
         array(
+            "text" => 'Элементы',
+            "title" => 'Элементы',
+            "items_id" => "iblocktools_elements",
+            "items" => array(
+                array(
+                    "text" => 'Генерация символьных кодов',
+                    "title" => 'Генерация символьных кодов',
+                    "items_id" => "iblocktools_elements_codes",
+                    "url" => "iblocktools_add_elements_codes.php",
+                )
+            )
+        ),
+        array(
             "text" => 'Свойства элементов',
             "title" => 'Свойства элементов',
             "items_id" => "iblocktools_props",
@@ -20,6 +33,19 @@ $aMenu[] = array(
                     "title" => 'Строковые свойства в список',
                     "items_id" => "iblocktools_props",
                     "url" => "iblocktools_strptops_to_list.php",
+                )
+            )
+        ),
+        array(
+            "text" => 'Разделы',
+            "title" => 'Разделы',
+            "items_id" => "iblocktools_sections",
+            "items" => array(
+                array(
+                    "text" => 'Генерация символьных кодов',
+                    "title" => 'Генерация символьных кодов',
+                    "items_id" => "iblocktools_sections_codes",
+                    "url" => "iblocktools_add_section_codes.php",
                 )
             )
         )
