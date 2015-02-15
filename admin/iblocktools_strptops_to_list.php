@@ -8,7 +8,7 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_a
 ?>            
  
 <form method="POST">
-    <input type="text" placeholder="IBLOCK_ID">
+   <? IblocktoolsFormsHelper::showIblockListSelect(); ?>
     <br>    <br>
     <input type="text" placeholder="PROPERTY_CODE">
     <br>    <br>

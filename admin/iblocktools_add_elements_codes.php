@@ -35,19 +35,9 @@ if ($_REQUEST['submit']) {
     }
     echo '</pre>';
 } else {
-    ?>    
+    ?> 
     <form method="POST" method="POST">
-        <?
-        $res = CIBlock::GetList(array("ID" => "ASC"), array(), false);
-        ?> 
-        <select name="IBLOCK_ID"> 
-            <?
-            while ($ar_res = $res->Fetch()) {
-                ?>
-                <option value="<?= $ar_res['ID'] ?>">[<?= $ar_res['ID'] ?>] <?= $ar_res['NAME'] ?></option>
-                <?
-             } ?>
-        </select>
+        <? IblocktoolsFormsHelper::showIblockListSelect(); ?>
         <br><br>
         <input type="submit" name="submit" value="Установить символьные коды элементам"> 
     </form> 
