@@ -2,7 +2,6 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_before.php");
 $APPLICATION->SetTitle('Простановка символьных кодов разделам');
 $module = 'iblocktools';
-IncludeModuleLangFile(__FILE__);
 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/" . $module . "/include.php");
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_admin_after.php");
 CModule::IncludeModule('iblock');
