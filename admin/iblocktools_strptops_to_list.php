@@ -21,8 +21,7 @@ switch ($step) {
         while ($item = $res->Fetch()) {
             $result[$item["PROPERTY_" . $PROPERTY_ID . "_VALUE"]] ++;
             $_SESSION['PROP_VALUES'][$item["ID"]] = trim($item["PROPERTY_" . $PROPERTY_ID . "_VALUE"]);
-        }
-
+        } 
         echo "<pre>";
         if($result) {
             echo "Все варианты значений и их количество:\r\n";
@@ -33,17 +32,14 @@ switch ($step) {
         } else {
             ShowError("Ни одного значения не заполнено");
             break; 
-        }  
-        file_put_contents($_SERVER["DOCUMENT_ROOT"] . "/data.temp",
-                serialize($_SESSION['PROP_VALUES']));
+        }
         echo "</pre>";
         ?> 
         <form method="POST">
             <input type="hidden" name="PROPERTY_ID" value="<?=$PROPERTY_ID;?>">
             <input type="hidden" name="IBLOCK_ID" value="<?=$_REQUEST['IBLOCK_ID'];?>">
             <input type="hidden" name="step" value="2">
-            <input type="submit" name="submit" value="Шаг 2: Преобразовываем"> 
-            <p>На случай возникновения проблем с потерей данных (всё пишется на коленках) значения свойства у всех элементов записаны в файл data.temp в корне сайта</p>
+            <input type="submit" name="submit" value="Шаг 2: Преобразовываем">
         </form>
         <?
         break;
