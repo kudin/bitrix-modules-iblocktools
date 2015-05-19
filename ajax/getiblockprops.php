@@ -5,6 +5,8 @@ require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/include/prolog_before.
 if(!$USER->IsAdmin()) {
     die();
 }
+
+CModule::IncludeModule('iblock');
  
 $properties = CIBlockProperty::GetList(
         array("sort" => "asc",
@@ -18,4 +20,4 @@ while ($prop_fields = $properties->GetNext()) {
                       'NAME' => $prop_fields["NAME"]);
 }
 
-echo json_encode($result);
+echo json_encode($result); 

@@ -20,6 +20,12 @@ $aMenu[] = array(
                     "title" => 'Генерация символьных кодов',
                     "items_id" => "iblocktools_elements_codes",
                     "url" => "iblocktools_add_elements_codes.php",
+                ), 
+                array(
+                    "text" => 'Массовые действия над полями',
+                    "title" => 'Массовые действия над полями',
+                    "items_id" => "iblocktools_elements_mass_action",
+                    "url" => "iblocktools_elements_mass_action.php",
                 )
             )
         ),
