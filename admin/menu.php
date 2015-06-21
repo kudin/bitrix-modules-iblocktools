@@ -54,7 +54,20 @@ $aMenu[] = array(
                     "url" => "iblocktools_add_section_codes.php",
                 )
             )
-        )
+        ),
+        array(
+            "text" => 'Инфоблоки',
+            "title" => 'Инфоблоки',
+            "items_id" => "iblocktools_iblock",
+            "items" => array(
+                array(
+                    "text" => 'Изменение типа инфоблока',
+                    "title" => 'Изменение типа инфоблока',
+                    "items_id" => "iblocktools_change_iblock_type",
+                    "url" => "iblocktools_change_iblock_type.php",
+                ),  
+            )
+        ),
     )
 );
 
