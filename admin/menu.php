@@ -66,6 +66,12 @@ $aMenu[] = array(
                     "items_id" => "iblocktools_change_iblock_type",
                     "url" => "iblocktools_change_iblock_type.php",
                 ),  
+                array(
+                    "text" => 'Изменение кода типу инфоблока',
+                    "title" => 'Изменение кода типу инфоблока',
+                    "items_id" => "iblocktools_change_iblock_type_code",
+                    "url" => "iblocktools_change_iblock_type_code.php",
+                ),  
             )
         ),
     )
