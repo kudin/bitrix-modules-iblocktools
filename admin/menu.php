@@ -39,6 +39,12 @@ $aMenu[] = array(
                     "title" => 'Строковые свойства в список',
                     "items_id" => "iblocktools_props",
                     "url" => "iblocktools_strptops_to_list.php",
+                ),
+                array(
+                    "text" => 'Массовое создание свойств',
+                    "title" => 'Массовое создание свойств',
+                    "items_id" => "iblocktools_massproperties",
+                    "url" => "iblocktools_massproperties.php",
                 )
             )
         ),
@@ -65,7 +71,14 @@ $aMenu[] = array(
                     "title" => 'Изменение типа инфоблока',
                     "items_id" => "iblocktools_change_iblock_type",
                     "url" => "iblocktools_change_iblock_type.php",
-                ),  
+                ),   
+            )
+        ),    
+        array(
+            "text" => 'Типы инфоблоков',
+            "title" => 'Типы инфоблоков',
+            "items_id" => "iblocktools_iblocktypes",
+            "items" => array( 
                 array(
                     "text" => 'Изменение кода типу инфоблока',
                     "title" => 'Изменение кода типу инфоблока',

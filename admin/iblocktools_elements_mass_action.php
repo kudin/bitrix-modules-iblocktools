@@ -43,7 +43,7 @@ if ($_REQUEST['submit']) {
                     Значение поля попадает в переменную $field<br>
                     <textarea name='code' style="width: 500px; height: 130px; resize: none;">$field = str_replace(' ', '_', $field);</textarea>
                     <br><br>
-                    <input type="submit" name="submit" value="Предпросмотр"> 
+                    <input type="submit" name="submit" value="Готово"> 
                 </form>  
             </td>
             <td width='50%' valign='top'>
