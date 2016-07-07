@@ -26,16 +26,24 @@ class iblocktools extends CModule {
         $this->MODULE_NAME = 'Настройки для инфоблоков';
         $this->MODULE_DESCRIPTION = 'Актуальную версию модуля можно скачать с <a target="blank" href="http://github.com/kudin/bitrix-modules-iblocktools">http://github.com/kudin/bitrix-modules-iblocktools</a>'; 
     }
-
+ 
     function DoInstall() {
         CopyDirFiles($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/iblocktools/install/bitrix_files/', 
                      $_SERVER['DOCUMENT_ROOT'] . '/bitrix/', true, true);
+         
+        RegisterModuleDependences('main', 'OnAdminListDisplay', 'iblocktools', 'MassPropsActions', 'OnAdminListDisplayHandler');
+        RegisterModuleDependences('main', 'OnBeforeProlog', 'iblocktools', 'MassPropsActions', 'OnBeforePrologHandler');
+ 
         RegisterModule(self::MODULE_ID);
     }
 
     function DoUninstall() {
         DeleteDirFiles($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/iblocktools/install/bitrix_files/", 
                        $_SERVER["DOCUMENT_ROOT"] . "/bitrix/");
+        
+        UnRegisterModuleDependences('main', 'OnAdminListDisplay', 'iblocktools', 'MassPropsActions', 'OnAdminListDisplayHandler');
+        UnRegisterModuleDependences('main', 'OnBeforeProlog', 'iblocktools', 'MassPropsActions', 'OnBeforePrologHandler');
+ 
         UnRegisterModule(self::MODULE_ID);
     }
 

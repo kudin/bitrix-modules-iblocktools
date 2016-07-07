@@ -6,6 +6,7 @@ if(defined('ADMIN_SECTION')) {
             "iblocktools", 
             array(
                     "IblocktoolsFormsHelper" => "tools/formsHelper.php",
+                    "MassPropsActions" => "classes/general/MassPropsActions.php",
             )
     );
 
